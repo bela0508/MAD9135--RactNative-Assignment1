@@ -42,7 +42,7 @@ const List = () => {
   return (
     <SafeAreaView>
       <FlatList
-        styles={theme.components.list}
+        style={theme.components.list}
         data={list}
         renderItem={({ item }) => (
           <Item item={item} onPress={() => goto(item)} />

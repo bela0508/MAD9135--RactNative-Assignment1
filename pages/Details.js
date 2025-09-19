@@ -1,5 +1,4 @@
-import { View, Text, Image } from "react-native";
-import { Button } from "@react-navigation/elements";
+import { View, Text, Image, TouchableOpacity } from "react-native";
 
 import { useEffect, useState } from "react";
 import theme from "../theme/styles";
@@ -19,7 +18,9 @@ export default function Details({ route }) {
           theme.components.horizontalImage,
           !shouldRotate && { transform: [{ rotate: "90deg" }] },
         ]}
+        resizeMode="contain"
       />
+
       <Text style={theme.typography.title}>
         {item.brand + " " + item.model}
       </Text>
@@ -36,11 +37,11 @@ export default function Details({ route }) {
           Number of Frets: {item.number_of_frets}
         </Text>
         <Text style={theme.typography.small}>Year: {item.year}</Text>
-        <Button style={theme.components.primaryButton}>
+        <TouchableOpacity style={theme.components.primaryButton}>
           <Text style={theme.components.primaryButtonText}>
             Buy for: {item.price} $
           </Text>
-        </Button>
+        </TouchableOpacity>
       </View>
     </View>
   );

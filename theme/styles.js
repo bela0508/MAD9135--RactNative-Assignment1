@@ -152,22 +152,28 @@ const components = StyleSheet.create({
     backgroundColor: colors.background,
   },
   list: {
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
-    gap: spacing.lg,
+    flexDirection: "column",
     paddingBottom: spacing.xl,
-    border: `1px solid ${colors.border}`,
+    paddingHorizontal: spacing.md,
+    borderWidth: 1,
+    borderColor: colors.border,
   },
+
   container: {
     flex: 1,
     backgroundColor: colors.background,
     padding: spacing.md,
   },
   footer: {
-    flex: 1,
-    backgroundColor: colors.background,
+    position: "absolute",
+    bottom: 0,
     left: 0,
+    right: 0,
+    alignItems: "center",
+    padding: spacing.md,
+    backgroundColor: colors.background,
   },
+
   row: {
     flexDirection: "row",
     alignItems: "center",
